@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymos"></script>
+</head>
+    <body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="imagess/images.jfif" class= "logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>WEB/APP developer</p>
+            <h1>Hi, i'm<span> Philip Tom</span><br> from Nigeria</h1>
+        </div>
+    </div>
+</div>
+<!----------------------about----------->
+<div id="about">
+<div class="class">
+    <div class="row">
+        <div class="about-col-1">
+        <img src="imagess/PXL_20221119_114936189_2.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title"><span>About</span> me</h1>
+            <p>I'm Philip Tom, final year computer science University student,with immense passion
+                 for front-end web and mobile app development, from Cross-river state nigeria,but spent
+                  i've spent all my life in lagos state,hope to one day 
+                  create applications that billions of people around the world will make
+                   use of, my hobbies are; 
+                  coding,playing basketball, listening to music, playing video games.</p>
+
+                  <div class="tab-titles">
+                    <p class="tab-links active-link" onClick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onClick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onClick="opentab('education')">Education</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><b>Web development</b></span><br>Web app Development</li>
+                        <li><span><b>App development</b></span><br>Building android/IOS apps</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span><b>2023</b></span><br>Sololearn</li>
+                        <li><span><b>2022</b></span><br>Javascript training at W3schools</li>
+                    </ul>
+                  </div> 
+
+                  <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span><b>2023</b></span><br>HTML training at Sololearn</li>
+                        <li><span><b>2012-2018</b></span><br>Al furqaan college</li>
+                        <li><span><b>2022</b></span><br>Javascript training at W3schools</li>
+                        <li><span><b>2019-2023</b></span><br>Bsc Computer Science at National open university of Nigeria</li>
+                    </ul>
+                  </div>                        
+
+        </div>
+        
+    </div>
+</div>
+</div>
+<!--------------------services-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My services</h1>
+        <div class="services-list">
+        <div>
+            <i class="fas fa-code"></i>
+            <h2><span>Web</span> Development</h2>
+            <p>Developing web applications and turning web design to code.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div>
+            <i class="fas fa-crop-alt"></i>
+            <h2><span>Mobile</span> app development</h2>
+            <p>Developing mobile applications and turning web design to code.</p>
+            <a href="#">learn more</a>
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="contact">
+    <h1>Contact</h1>
+    <ul>
+        <li>Email: philipt525@gmail.com</li>
+        <li>Phone: 09029518313</li>
+    </ul>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+        
+    }
+</script>
+    </body>
+</html>
